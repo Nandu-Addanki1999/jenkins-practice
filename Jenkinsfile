@@ -3,6 +3,7 @@ pipeline {
         label 'AGENT-1'
     }
 
+    // Build
     stages {
         stage('Build') {
             steps {
@@ -20,7 +21,6 @@ pipeline {
             }
         }
     }
-}
 
     post { 
         always { 
@@ -34,8 +34,7 @@ pipeline {
             echo 'Hello Failure'
         }
     }
-
-
+}
 
 
 
