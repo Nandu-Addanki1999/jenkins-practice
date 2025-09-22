@@ -6,7 +6,7 @@ pipeline {
         COURSE = 'jenkins'
     }
     options {
-        timeout(time: 1, unit: 'SECONDS') 
+        timeout(time: 10, unit: 'SECONDS') 
         //disableConcurrentBuilds()
     }
 
@@ -17,7 +17,9 @@ pipeline {
                 script{
                     sh """
                         echo "Hello Build"
-                        env                    """
+                        sleep 10
+                        env 
+                    """
                 }  
             }
         }
